@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Usuários</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+Cadastro de Usuários
+</h1>
+
+
+
+<input id="nome" placeholder="Nome">
+
+
+<input id="telefone" placeholder="Telefone">
+
+
+<input id="email" placeholder="Email">
+
+
+<button onclick="cadastrarUsuario()">
+
+Salvar
+
+</button>
+
+
+
+<h2>
+Lista de Usuários
+</h2>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Nome</th>
+
+<th>Telefone</th>
+
+<th>Email</th>
+
+<th>Ações</th>
+
+
+</tr>
+
+</thead>
+
+
+<tbody id="listaUsuarios">
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+<script src="../js/api.js"></script>
+
+<script src="../js/usuarios.js"></script>
+
+
+</body>
+
+
+</html>

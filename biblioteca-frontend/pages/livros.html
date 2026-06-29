@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Livros</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>Cadastro de Livros</h1>
+
+
+
+<input id="codigo" placeholder="Código">
+
+<input id="titulo" placeholder="Título">
+
+<input id="autor" placeholder="Autor">
+
+<input id="categoria" placeholder="Categoria">
+
+<input id="quantidade" placeholder="Quantidade">
+
+
+<button onclick="cadastrarLivro()">
+
+Salvar
+
+</button>
+
+
+
+<h2>Lista</h2>
+
+
+<table>
+
+<thead>
+    
+<tr>
+
+<th>Código</th>
+
+<th>Título</th>
+
+<th>Autor</th>
+
+<th>Quantidade</th>
+
+<th>Ações</th>
+
+
+</tr>
+
+</thead>
+
+
+<tbody id="lista">
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+<script src="../js/api.js"></script>
+
+<script src="../js/livros.js"></script>
+
+
+</body>
+
+
+</html>
