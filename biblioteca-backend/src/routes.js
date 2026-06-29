@@ -270,3 +270,54 @@ router.get(
 controller.atrasados
 
 );
+
+exports.listarAtrasados = async()=>{
+
+
+const resultado = await db.query(
+
+`
+
+SELECT
+
+emprestimos.*,
+
+usuarios.nome AS usuario,
+
+livros.titulo AS livro
+
+
+FROM emprestimos
+
+
+JOIN usuarios
+
+ON usuarios.id = emprestimos.usuario_id
+
+
+JOIN livros
+
+ON livros.id = emprestimos.livro_id
+
+
+
+WHERE 
+
+emprestimos.status='ativo'
+
+
+AND
+
+emprestimos.data_prevista_devolucao < CURRENT_DATE
+
+
+`
+
+);
+
+
+
+return resultado.rows;
+
+
+};

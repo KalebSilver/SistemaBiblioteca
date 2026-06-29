@@ -427,3 +427,102 @@ return resultado.rows;
 
 
 };
+// ==========================
+// DEVOLUÇÃO
+// ==========================
+
+
+exports.devolverLivro = async(id)=>{
+
+
+const resultado = await db.query(
+
+`
+
+SELECT *
+
+FROM emprestimos
+
+WHERE id=$1
+
+`,
+
+[id]
+
+);
+
+
+return resultado.rows[0];
+
+
+};
+
+
+
+
+
+exports.aumentarLivro = async(id)=>{
+
+
+await db.query(
+
+`
+
+UPDATE livros
+
+SET quantidade = quantidade + 1
+
+WHERE id=$1
+
+`,
+
+[id]
+
+);
+
+
+};
+
+
+
+
+
+exports.finalizarEmprestimo = async(id,data)=>{
+
+
+const resultado = await db.query(
+
+`
+
+UPDATE emprestimos
+
+SET
+
+status='devolvido',
+
+data_devolucao=$1
+
+
+WHERE id=$2
+
+
+RETURNING *
+
+`,
+
+[
+
+data,
+
+id
+
+]
+
+);
+
+
+
+return resultado.rows[0];
+
+
+};
