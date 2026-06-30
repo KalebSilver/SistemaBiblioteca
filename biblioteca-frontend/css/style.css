@@ -79,3 +79,40 @@ padding:10px;
 border:1px solid #ddd;
 
 }
+nav{
+
+
+background:#2980b9;
+
+padding:15px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+nav a{
+
+
+color:white;
+
+text-decoration:none;
+
+margin-right:20px;
+
+font-size:18px;
+
+
+}
+
+
+
+nav a:hover{
+
+
+text-decoration:underline;
+
+
+}
